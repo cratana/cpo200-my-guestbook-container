@@ -19,4 +19,5 @@ docker build -t guestbook  .
 
 docker tag guestbook "${GCR_PREFIX}/${PROJECT_ID}/guestbook"
 
-gcloud docker push "${GCR_PREFIX}/${PROJECT_ID}/guestbook"
+# added bug fix for -- argument for gcloud docker
+gcloud docker -- push "${GCR_PREFIX}/${PROJECT_ID}/guestbook"
